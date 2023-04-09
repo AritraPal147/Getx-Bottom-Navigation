@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_bottom_navigation/pages/home/home_controller.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends GetView<HomePageController> {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Home page',
-          style: TextStyle(color: Colors.black),
+        title: Text(
+          controller.title,
+          style: const TextStyle(color: Colors.black),
         ),
         elevation: 0,
         backgroundColor: Colors.white,
